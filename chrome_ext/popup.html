@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>MobileFactor</title>
+    <style>
+    body {
+      overflow: hidden;
+      margin: 0px;
+      padding: 0px;
+      background: white;
+      min-width: 350px;
+    }
+    </style>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <center>
+      <div style="margin: 10px 10px 10px 10px">
+      <h2 id="title">MobileFactor</h2>
+      <div id="bind">
+          <h3 id="secondLlv">Use your smartphone for QR code scanning</h4>
+          <img id="qrcode" src="loading.gif"/>
+          <h4 id="hint">Use your smartphone for QR code scanning</h4>
+      </div>
+      <div id="inside" style="display: none;" style="margin: 10px 10px 10px 10px">
+          <img id="userpic" src="anon.png"/>
+          <h4 id="email">Use your smartphone for QR code scanning</h4>
+          <a id="logoutBtn" href="#">Logout</a>
+          <br/>
+      </div>
+      <div id="compileData" style="display: none;">
+        <h3 id="domain"></h3>
+        <input id="requestLogin" type="button" value="Want login?"/>
+        <br/>
+      </div>
+
+      <div id="passwordRequest" style="display: none;">
+        <h3>Waiting confirmation from mFactor</h4>
+        <img src="loading.gif"/>
+        <h4>Take your phone and confirm authentication</h4>
+      </div>
+
+    </div>
+  </center>
+  </body>
+</html>
