@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1844F4031E69B031002A6A96 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844F4021E69B031002A6A96 /* User.swift */; };
-		1844F4051E69B0FB002A6A96 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844F4041E69B0FB002A6A96 /* MainViewController.swift */; };
 		184BA4A91E66DCC5002D2D7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BA4A81E66DCC5002D2D7D /* AppDelegate.swift */; };
 		184BA4AB1E66DCC5002D2D7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BA4AA1E66DCC5002D2D7D /* ViewController.swift */; };
 		184BA4AE1E66DCC5002D2D7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184BA4AC1E66DCC5002D2D7D /* Main.storyboard */; };
@@ -18,10 +17,14 @@
 		184BA4C11E66DCC5002D2D7D /* MobileFactorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BA4C01E66DCC5002D2D7D /* MobileFactorTests.swift */; };
 		184BA4CC1E66DCC5002D2D7D /* MobileFactorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BA4CB1E66DCC5002D2D7D /* MobileFactorUITests.swift */; };
 		184BA4DA1E66E55B002D2D7D /* RegisterAViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BA4D91E66E55B002D2D7D /* RegisterAViewControl.swift */; };
+		18B400341E6DF92A0015295A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B400331E6DF92A0015295A /* TableViewCell.swift */; };
+		18B400361E6DFA510015295A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B400351E6DFA510015295A /* Service.swift */; };
+		18B400381E6DFB2B0015295A /* ServiceCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B400371E6DFB2B0015295A /* ServiceCollection.swift */; };
+		18B4003A1E6E03740015295A /* ServiceListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B400391E6E03740015295A /* ServiceListTableView.swift */; };
+		18B4003C1E6E08230015295A /* ServiceDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B4003B1E6E08230015295A /* ServiceDetailsVC.swift */; };
 		18EE04311E69CC7100DA916D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE04301E69CC7100DA916D /* LoginViewController.swift */; };
 		18EE04331E6A9FE400DA916D /* ServerFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE04321E6A9FE400DA916D /* ServerFake.swift */; };
 		18EE04351E6AA34D00DA916D /* RegisterBViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE04341E6AA34D00DA916D /* RegisterBViewControl.swift */; };
-		18FA88E11E6DB7490063C15F /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA88E01E6DB7490063C15F /* AddServiceViewController.swift */; };
 		18FA88E31E6DD92A0063C15F /* AddServiceTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA88E21E6DD92A0063C15F /* AddServiceTableView.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +47,6 @@
 
 /* Begin PBXFileReference section */
 		1844F4021E69B031002A6A96 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		1844F4041E69B0FB002A6A96 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		184BA4A51E66DCC5002D2D7D /* MobileFactor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileFactor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		184BA4A81E66DCC5002D2D7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		184BA4AA1E66DCC5002D2D7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,10 +62,14 @@
 		184BA4CB1E66DCC5002D2D7D /* MobileFactorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileFactorUITests.swift; sourceTree = "<group>"; };
 		184BA4CD1E66DCC5002D2D7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		184BA4D91E66E55B002D2D7D /* RegisterAViewControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterAViewControl.swift; sourceTree = "<group>"; };
+		18B400331E6DF92A0015295A /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		18B400351E6DFA510015295A /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		18B400371E6DFB2B0015295A /* ServiceCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceCollection.swift; sourceTree = "<group>"; };
+		18B400391E6E03740015295A /* ServiceListTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceListTableView.swift; sourceTree = "<group>"; };
+		18B4003B1E6E08230015295A /* ServiceDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailsVC.swift; sourceTree = "<group>"; };
 		18EE04301E69CC7100DA916D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		18EE04321E6A9FE400DA916D /* ServerFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerFake.swift; sourceTree = "<group>"; };
 		18EE04341E6AA34D00DA916D /* RegisterBViewControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterBViewControl.swift; sourceTree = "<group>"; };
-		18FA88E01E6DB7490063C15F /* AddServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServiceViewController.swift; sourceTree = "<group>"; };
 		18FA88E21E6DD92A0063C15F /* AddServiceTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServiceTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,12 +130,15 @@
 				184BA4AF1E66DCC5002D2D7D /* MobileFactor.xcdatamodeld */,
 				184BA4D91E66E55B002D2D7D /* RegisterAViewControl.swift */,
 				1844F4021E69B031002A6A96 /* User.swift */,
-				1844F4041E69B0FB002A6A96 /* MainViewController.swift */,
 				18EE04301E69CC7100DA916D /* LoginViewController.swift */,
 				18EE04321E6A9FE400DA916D /* ServerFake.swift */,
 				18EE04341E6AA34D00DA916D /* RegisterBViewControl.swift */,
-				18FA88E01E6DB7490063C15F /* AddServiceViewController.swift */,
 				18FA88E21E6DD92A0063C15F /* AddServiceTableView.swift */,
+				18B400331E6DF92A0015295A /* TableViewCell.swift */,
+				18B400351E6DFA510015295A /* Service.swift */,
+				18B400371E6DFB2B0015295A /* ServiceCollection.swift */,
+				18B400391E6E03740015295A /* ServiceListTableView.swift */,
+				18B4003B1E6E08230015295A /* ServiceDetailsVC.swift */,
 			);
 			path = MobileFactor;
 			sourceTree = "<group>";
@@ -288,14 +297,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				18EE04311E69CC7100DA916D /* LoginViewController.swift in Sources */,
+				18B400381E6DFB2B0015295A /* ServiceCollection.swift in Sources */,
+				18B400361E6DFA510015295A /* Service.swift in Sources */,
+				18B4003C1E6E08230015295A /* ServiceDetailsVC.swift in Sources */,
+				18B4003A1E6E03740015295A /* ServiceListTableView.swift in Sources */,
 				18EE04331E6A9FE400DA916D /* ServerFake.swift in Sources */,
 				184BA4AB1E66DCC5002D2D7D /* ViewController.swift in Sources */,
 				184BA4A91E66DCC5002D2D7D /* AppDelegate.swift in Sources */,
 				184BA4B11E66DCC5002D2D7D /* MobileFactor.xcdatamodeld in Sources */,
-				1844F4051E69B0FB002A6A96 /* MainViewController.swift in Sources */,
 				18FA88E31E6DD92A0063C15F /* AddServiceTableView.swift in Sources */,
-				18FA88E11E6DB7490063C15F /* AddServiceViewController.swift in Sources */,
 				1844F4031E69B031002A6A96 /* User.swift in Sources */,
+				18B400341E6DF92A0015295A /* TableViewCell.swift in Sources */,
 				184BA4DA1E66E55B002D2D7D /* RegisterAViewControl.swift in Sources */,
 				18EE04351E6AA34D00DA916D /* RegisterBViewControl.swift in Sources */,
 			);

@@ -46,7 +46,6 @@ class RegisterBViewControl : UIViewController {
             return false
         }
         
-        // TO DO: dobbiamo passare l'utente alla main page
         
         return true
         

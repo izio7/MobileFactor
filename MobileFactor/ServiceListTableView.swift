@@ -8,9 +8,10 @@
 
 import UIKit
 
-class AddServiceTableView : UITableViewController {
+class ServiceListTableView : UITableViewController {
     
-    var services = ServiceCollection()
+    var myServices = ServiceCollection(x: "my")
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,7 @@ class AddServiceTableView : UITableViewController {
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         //self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
         
         
     }
@@ -40,9 +42,9 @@ class AddServiceTableView : UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
-        return services.collection.count
+        return myServices.collection.count
     }
- 
+    
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -51,8 +53,9 @@ class AddServiceTableView : UITableViewController {
         
         // Configure the cell...
         
-        let serv = services.collection[indexPath.row]
-
+        var i = indexPath.row
+        
+        var serv = myServices.collection[indexPath.row]
         
         cell.icon.image = serv.icon
         cell.serviceName.text = serv.showedName
@@ -69,37 +72,37 @@ class AddServiceTableView : UITableViewController {
      */
     
     /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            
-            itemStore.itemCollection.remove(at: indexPath.row)
-            
-            
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            
-            tableView.reloadData()
-            
-        }
-        /*
-         else if editingStyle == .insert {
-         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-         }
-         */
-    }
-    */
+     // Override to support editing the table view.
+     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+     if editingStyle == .delete {
+     // Delete the row from the data source
+     
+     itemStore.itemCollection.remove(at: indexPath.row)
+     
+     
+     tableView.deleteRows(at: [indexPath], with: .fade)
+     
+     tableView.reloadData()
+     
+     }
+     /*
+     else if editingStyle == .insert {
+     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+     }
+     */
+     }
+     */
     
     
     /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-        
-        itemStore.move(from: fromIndexPath.row, to: to.row)
-        
-        tableView.reloadData()
-    }
-    */
+     // Override to support rearranging the table view.
+     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+     
+     itemStore.move(from: fromIndexPath.row, to: to.row)
+     
+     tableView.reloadData()
+     }
+     */
     
     
     // Override to support conditional rearranging of the table view.
@@ -107,15 +110,15 @@ class AddServiceTableView : UITableViewController {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
- 
+    
     
     /*
-    @IBAction func addItem(_ sender: Any) {
-        
-        itemStore.addItem(name: "", desc: "", quant: 0)
-        tableView.reloadData()
-    }
-    */
+     @IBAction func addItem(_ sender: Any) {
+     
+     itemStore.addItem(name: "", desc: "", quant: 0)
+     tableView.reloadData()
+     }
+     */
     
     
     
@@ -129,33 +132,18 @@ class AddServiceTableView : UITableViewController {
         // Pass the selected object to the new view controller.
         
         switch segue.identifier {
-        case "showNewItem"? :
+        case "showItem"? :
             
-            if let currentIndex = tableView.indexPathForSelectedRow?.row {
-                
-                let s = services.collection[currentIndex]
-                
-                let dstView = segue.destination as! ServiceDetailsVC
-                
-                dstView.currentService = s
-                
-            }
-        break
-        
-            
-        case "createElement"? :
-            /*
-            var it : Item
-            
-            it = itemStore.addItem(name: "", desc: "", quant: 0)
-            
-            
-            let dstView = segue.destination as! DetailsViewController
-            
-            dstView.currentItem = it
-            */
-        
+             if let currentIndex = tableView.indexPathForSelectedRow?.row {
+             
+             let s = myServices.collection[currentIndex]
+             
+             let dstView = segue.destination as! ServiceDetailsVC
+             
+             dstView.currentService = s
+             }
             break
+         
             
         default:
             
