@@ -14,15 +14,16 @@ class MainViewController : UIViewController {
     var cu : User!
     
     @IBAction func exampleButton(_ sender: Any) {
-        prepareAlertController()
+        showAlertController()
     }
+    
+    
+    
     @IBOutlet weak var userLabel: UILabel!
     
-    // funnyImage still needs a source path and some constraints on max/min width & heigth
-    // funnyImage is a funny 404like image that is showed only if the user has no added service
-    // ToBeImplemented: something like "oooops, I don't find any service!"
-    // Vito 2017 05 03
     @IBOutlet weak var funnyImage: UIImageView!
+    
+    @IBOutlet weak var editBarButton: UIBarButtonItem!
     
     @IBOutlet weak var accessSwitch: UISwitch!
     
@@ -32,11 +33,19 @@ class MainViewController : UIViewController {
     
     let alertController = UIAlertController(title: nil, message: "Demo", preferredStyle: .actionSheet)
 
+    func showAlertController () {
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     func prepareAlertController () {
         
         
         let editAction = UIAlertAction(title: "Edit", style: .default) {
             _ in
+            
+            
+            self.performSegue(withIdentifier: "edit", sender: self)
         }
         
         let accessAction = UIAlertAction(title: "Accedi Automaticamente", style: .default) {
@@ -63,7 +72,6 @@ class MainViewController : UIViewController {
         alertController.addAction(accessAction)
         alertController.addAction(cancelAction)
         
-        self.present(alertController, animated: true, completion: nil)
     }
     
     
@@ -84,6 +92,7 @@ class MainViewController : UIViewController {
             
         }
         
+        prepareAlertController()
     }
     
     func showFunnyImageStack (boolean : Bool) {
@@ -107,7 +116,7 @@ class MainViewController : UIViewController {
     }
     
     func userHasNoServices() -> Bool {
-        return true
+        return false
     }
     
 }
