@@ -12,6 +12,7 @@
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
@@ -21,78 +22,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uOd-1H-5cv">
-                                <rect key="frame" x="39" y="606" width="297" height="41"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2017 OneDotOne Team." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWI-S5-8Uv">
-                                        <rect key="frame" x="0.0" y="0.0" width="296.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIw-tU-cia">
-                                        <rect key="frame" x="0.0" y="20.5" width="296.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="00I-2X-jKc">
-                                <rect key="frame" x="64.5" y="286.5" width="245.5" height="93.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIz-fn-1TW">
-                                        <rect key="frame" x="0.0" y="0.0" width="245.5" height="52.5"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="MobileFactor">
-                                                <attributes>
-                                                    <font key="NSFont" size="43" name=".AppleSystemUIFont"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <color key="shadowColor" cocoaTouchSystemColor="lightTextColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAW-K4-LNM">
-                                        <rect key="frame" x="0.0" y="52.5" width="245.5" height="20.5"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="The Best Way To ">
-                                                <attributes>
-                                                    <font key="NSFont" metaFont="system" size="17"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yer-rP-c5X">
-                                        <rect key="frame" x="0.0" y="73" width="245.5" height="20.5"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Manage Your Passwords">
-                                                <attributes>
-                                                    <font key="NSFont" metaFont="system" size="17"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo_Fotor_Fotor" translatesAutoresizingMaskIntoConstraints="NO" id="K2u-0V-Ywi">
+                                <rect key="frame" x="67" y="269" width="240" height="210"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="uOd-1H-5cv" secondAttribute="bottom" constant="20" id="Ny7-9I-3Gt"/>
-                            <constraint firstItem="00I-2X-jKc" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="OmX-fh-FOG"/>
-                            <constraint firstItem="uOd-1H-5cv" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="gJJ-gz-ENi"/>
-                            <constraint firstItem="00I-2X-jKc" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="mYw-lF-BGm"/>
+                            <constraint firstItem="K2u-0V-Ywi" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="XHZ-6G-Ufu"/>
+                            <constraint firstItem="K2u-0V-Ywi" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="amw-CF-uiN"/>
+                            <constraint firstItem="K2u-0V-Ywi" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="iNt-yK-1bw"/>
+                            <constraint firstItem="K2u-0V-Ywi" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ntz-1f-kfb"/>
                         </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo_Fotor_Fotor" width="375" height="500"/>
+    </resources>
 </document>

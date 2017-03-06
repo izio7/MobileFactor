@@ -26,6 +26,10 @@ class MainViewController : UIViewController {
     
     @IBOutlet weak var accessSwitch: UISwitch!
     
+    @IBOutlet weak var funnyImageStack: UIStackView!
+    
+    @IBOutlet weak var ServicesStack: UIStackView!
+    
     let alertController = UIAlertController(title: nil, message: "Demo", preferredStyle: .actionSheet)
 
     func prepareAlertController () {
@@ -67,35 +71,43 @@ class MainViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        showFunnyImage(boolean: false)
+        showFunnyImageStack(boolean: false)
         
         accessSwitch.isEnabled = false
         
         //userLabel.text = cu.username
         
-        //if (userHasNoServices) {
-        //  showFunnyImage(true)
-        //}
+        
+        if (userHasNoServices()) {
+            
+            self.showFunnyImageStack(boolean: true)
+            
+        }
         
     }
     
-    func showFunnyImage (boolean : Bool) {
+    func showFunnyImageStack (boolean : Bool) {
         
         switch (boolean) {
             case true:
-                funnyImage.isHidden = false
+                funnyImageStack.isHidden = false
+                ServicesStack.isHidden = true
             break
             
             case false:
-                funnyImage.isHidden = true
+                funnyImageStack.isHidden = true
+                ServicesStack.isHidden = false
             break
             
         default:
-            funnyImage.isHidden = true
+            funnyImageStack.isHidden = true
             break
         }
         
     }
     
+    func userHasNoServices() -> Bool {
+        return true
+    }
     
 }

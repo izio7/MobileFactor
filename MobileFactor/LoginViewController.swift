@@ -12,6 +12,7 @@ class LoginViewController : UIViewController {
     
     var user : User?
     
+    @IBOutlet weak var bgImage: UIImageView!
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var accessButton: UIButton!
@@ -27,6 +28,9 @@ class LoginViewController : UIViewController {
         emailTextField.placeholder="inserisci la tua mail"
         
         user = createFakeUser()
+        
+        emailTextField.keyboardType = UIKeyboardType.default
+        
     }
     
     func viewWillAppear() {

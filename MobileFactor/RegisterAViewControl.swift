@@ -13,13 +13,17 @@ class RegisterAViewControl: UIViewController {
     
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var registerButton: UIButton!
 
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        print(identifier)
         
         let name = userNameTextField.text
         let email = emailTextField.text
         
         if (name != ""  && self.validateEmail(enteredEmail: email!)) {
+            print("ok")
             return true
         }
         
