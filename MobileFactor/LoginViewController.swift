@@ -18,19 +18,35 @@ class LoginViewController : UIViewController {
     @IBOutlet weak var accessButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
     
+    
     @IBAction func accessButtonPressed(_ sender: UIButton) {
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        var savedUser = false
+        
+        if (savedUser == false) {
+            
+            performSegue(withIdentifier: "register", sender: self)
+            
+            print ("ok")
+        }
+
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+               
         emailTextField.text=""
         emailTextField.placeholder="inserisci la tua mail"
         
         user = createFakeUser()
         
         emailTextField.keyboardType = UIKeyboardType.default
-        
+    
     }
     
     func viewWillAppear() {
@@ -65,5 +81,11 @@ class LoginViewController : UIViewController {
         
         
         return u
+    }
+    
+    func isUserSaved () -> Bool {
+        
+        return false
+        
     }
 }
