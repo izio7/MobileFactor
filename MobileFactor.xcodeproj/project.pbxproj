@@ -22,6 +22,7 @@
 		18B400381E6DFB2B0015295A /* ServiceCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B400371E6DFB2B0015295A /* ServiceCollection.swift */; };
 		18B4003A1E6E03740015295A /* ServiceListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B400391E6E03740015295A /* ServiceListTableView.swift */; };
 		18B4003C1E6E08230015295A /* ServiceDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B4003B1E6E08230015295A /* ServiceDetailsVC.swift */; };
+		18B4003F1E6EBE1A0015295A /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B4003E1E6EBE1A0015295A /* LocalAuthentication.framework */; };
 		18EE04311E69CC7100DA916D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE04301E69CC7100DA916D /* LoginViewController.swift */; };
 		18EE04331E6A9FE400DA916D /* ServerFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE04321E6A9FE400DA916D /* ServerFake.swift */; };
 		18EE04351E6AA34D00DA916D /* RegisterBViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE04341E6AA34D00DA916D /* RegisterBViewControl.swift */; };
@@ -67,6 +68,7 @@
 		18B400371E6DFB2B0015295A /* ServiceCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceCollection.swift; sourceTree = "<group>"; };
 		18B400391E6E03740015295A /* ServiceListTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceListTableView.swift; sourceTree = "<group>"; };
 		18B4003B1E6E08230015295A /* ServiceDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailsVC.swift; sourceTree = "<group>"; };
+		18B4003E1E6EBE1A0015295A /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		18EE04301E69CC7100DA916D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		18EE04321E6A9FE400DA916D /* ServerFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerFake.swift; sourceTree = "<group>"; };
 		18EE04341E6AA34D00DA916D /* RegisterBViewControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterBViewControl.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B4003F1E6EBE1A0015295A /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +108,7 @@
 				184BA4BF1E66DCC5002D2D7D /* MobileFactorTests */,
 				184BA4CA1E66DCC5002D2D7D /* MobileFactorUITests */,
 				184BA4A61E66DCC5002D2D7D /* Products */,
+				18B4003D1E6EBE1A0015295A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,6 +163,14 @@
 				184BA4CD1E66DCC5002D2D7D /* Info.plist */,
 			);
 			path = MobileFactorUITests;
+			sourceTree = "<group>";
+		};
+		18B4003D1E6EBE1A0015295A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18B4003E1E6EBE1A0015295A /* LocalAuthentication.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
