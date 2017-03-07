@@ -300,6 +300,24 @@
             </objects>
             <point key="canvasLocation" x="-167" y="-679"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="FYx-cc-xUo">
+            <objects>
+                <viewController id="Hcq-6t-1bJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h4o-na-b39"/>
+                        <viewControllerLayoutGuide type="bottom" id="9tq-IB-8Gq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Yo-zh-eBa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iDK-pA-lIL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="756" y="-680"/>
+        </scene>
         <!--Services: -->
         <scene sceneID="S0X-hc-e1b">
             <objects>
@@ -362,7 +380,7 @@
                                 <state key="normal" title="Back"/>
                             </button>
                             <connections>
-                                <segue destination="zNz-mA-tNI" kind="show" id="iDS-co-tvc"/>
+                                <segue destination="zNz-mA-tNI" kind="show" id="tOt-GZ-I3X"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -505,7 +523,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E8j-Pf-4qc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1649" y="-1506"/>
+            <point key="canvasLocation" x="1649" y="-1507"/>
         </scene>
         <!--Services: -->
         <scene sceneID="0A7-QP-zFO">
@@ -561,7 +579,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Services: " id="Icv-kW-Jg4">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="camera" id="8XZ-VR-U13"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="camera" id="8XZ-VR-U13">
+                            <connections>
+                                <segue destination="Hcq-6t-1bJ" kind="show" identifier="QR" id="C42-bt-gxX"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="w3T-KK-JAa">
                             <connections>
                                 <segue destination="Xw8-jr-ohL" kind="show" id="DJX-qj-Ui1"/>
@@ -608,6 +630,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="vpM-4n-Ik6"/>
         <segue reference="PGj-mP-50E"/>
-        <segue reference="iDS-co-tvc"/>
+        <segue reference="tOt-GZ-I3X"/>
     </inferredMetricsTieBreakers>
 </document>
