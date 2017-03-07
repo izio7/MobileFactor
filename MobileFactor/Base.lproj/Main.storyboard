@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -353,17 +354,13 @@
                             <outlet property="delegate" destination="A6q-Uk-Pt3" id="zq9-B5-2sT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Your Services:" id="w7t-KL-EUF">
-                        <barButtonItem key="leftBarButtonItem" systemItem="camera" id="tYa-ML-u2Y">
+                    <navigationItem key="navigationItem" title="Your Services:" id="hs7-7m-W6c">
+                        <barButtonItem key="leftBarButtonItem" systemItem="camera" id="mUT-qC-Hpt">
                             <connections>
-                                <segue destination="HOB-qO-hca" kind="show" id="Xg4-sy-xVO"/>
+                                <segue destination="oTu-qy-Rwf" kind="show" id="XIP-TA-51K"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="X84-hC-TPD">
-                            <connections>
-                                <segue destination="Xw8-jr-ohL" kind="show" id="JHD-PS-0Hl"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="PoY-jd-zoM"/>
                     </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="UPE-aD-Lhs" id="rbv-WK-0pE"/>
@@ -498,13 +495,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="173" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Domain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEH-nD-nqG">
-                                                <rect key="frame" x="0.0" y="0.0" width="58.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="59" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qaW-2c-jg7">
-                                                <rect key="frame" x="58.5" y="0.0" width="114.5" height="30"/>
+                                                <rect key="frame" x="59" y="0.0" width="114" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -515,13 +512,13 @@
                                         <rect key="frame" x="0.0" y="30" width="173" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hV-sR-NT9">
-                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="84" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ahG-GO-AlP">
-                                                <rect key="frame" x="83.5" y="0.0" width="89.5" height="30"/>
+                                                <rect key="frame" x="84" y="0.0" width="89" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -606,21 +603,60 @@
             </objects>
             <point key="canvasLocation" x="1649" y="-1506"/>
         </scene>
-        <!--Service DetailsVC-->
-        <scene sceneID="skR-2T-Eo7">
+        <!--Code View Controller-->
+        <scene sceneID="wD0-uW-0bO">
             <objects>
-                <viewController id="HOB-qO-hca" customClass="ServiceDetailsVC" customModule="MobileFactor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oTu-qy-Rwf" customClass="QRCodeViewController" customModule="QRCodeReader" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="KnA-KM-MXL"/>
-                        <viewControllerLayoutGuide type="bottom" id="7iF-21-vNH"/>
+                        <viewControllerLayoutGuide type="top" id="B48-bg-445"/>
+                        <viewControllerLayoutGuide type="bottom" id="uql-FY-hLR"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kJ8-Te-F6U">
+                    <view key="view" contentMode="scaleToFill" id="xmT-9L-pj4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZAR-Kk-gcq">
+                                <rect key="frame" x="1" y="1" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zXn-24-aca">
+                                <rect key="frame" x="47" y="193" width="281" height="281"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zXn-24-aca" secondAttribute="height" multiplier="1:1" id="fcq-Hu-ZFa"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No QR code is detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRQ-Rf-epr" userLabel="statusLabel">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="np6-8O-Nba"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zRQ-Rf-epr" firstAttribute="leading" secondItem="xmT-9L-pj4" secondAttribute="leading" id="0Yw-pt-t7L"/>
+                            <constraint firstItem="ZAR-Kk-gcq" firstAttribute="width" secondItem="xmT-9L-pj4" secondAttribute="width" id="3mZ-CI-Bf7"/>
+                            <constraint firstItem="zXn-24-aca" firstAttribute="centerY" secondItem="xmT-9L-pj4" secondAttribute="centerY" id="4L0-zP-mRW"/>
+                            <constraint firstItem="ZAR-Kk-gcq" firstAttribute="height" secondItem="xmT-9L-pj4" secondAttribute="height" id="8Yc-m6-tTl"/>
+                            <constraint firstItem="zXn-24-aca" firstAttribute="centerX" secondItem="xmT-9L-pj4" secondAttribute="centerX" id="I8A-p2-F5F"/>
+                            <constraint firstItem="uql-FY-hLR" firstAttribute="top" secondItem="zRQ-Rf-epr" secondAttribute="bottom" id="WHA-fl-FXN"/>
+                            <constraint firstItem="ZAR-Kk-gcq" firstAttribute="centerX" secondItem="xmT-9L-pj4" secondAttribute="centerX" id="XAI-OT-kCZ"/>
+                            <constraint firstItem="ZAR-Kk-gcq" firstAttribute="centerY" secondItem="xmT-9L-pj4" secondAttribute="centerY" id="XhF-nr-K97"/>
+                            <constraint firstItem="zXn-24-aca" firstAttribute="width" secondItem="xmT-9L-pj4" secondAttribute="width" multiplier="3:4" id="dhS-mn-ztD"/>
+                            <constraint firstItem="zRQ-Rf-epr" firstAttribute="width" secondItem="xmT-9L-pj4" secondAttribute="width" id="eXr-ek-V1q"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="overlay" destination="zXn-24-aca" id="h3W-mZ-AJz"/>
+                        <outlet property="qrView" destination="ZAR-Kk-gcq" id="0O6-v5-IFf"/>
+                        <outlet property="statusLabel" destination="zRQ-Rf-epr" id="WQl-hB-2LV"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vw2-p8-MR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pbh-Fo-Ap9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="788" y="-680"/>
         </scene>
@@ -629,9 +665,9 @@
         <image name="bg" width="1080" height="1920"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8RP-a8-mPa"/>
-        <segue reference="W24-nl-4Au"/>
         <segue reference="vpM-4n-Ik6"/>
         <segue reference="0Jq-cI-9gO"/>
+        <segue reference="8RP-a8-mPa"/>
+        <segue reference="6uu-9P-3Ys"/>
     </inferredMetricsTieBreakers>
 </document>
