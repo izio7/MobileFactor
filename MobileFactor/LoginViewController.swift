@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 class LoginViewController : UIViewController {
     
@@ -27,10 +28,25 @@ class LoginViewController : UIViewController {
         emailTextField.text=""
         emailTextField.placeholder="inserisci la tua mail"
         
+        
         user = createFakeUser()
         
         emailTextField.keyboardType = UIKeyboardType.default
         
+        //Looks for single or multiple taps.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        
+        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+        //tap.cancelsTouchesInView = false
+        
+        view.addGestureRecognizer(tap)
+        
+    }
+    
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     func viewWillAppear() {
@@ -65,5 +81,69 @@ class LoginViewController : UIViewController {
         
         
         return u
+    }
+    
+    func test() {
+        let context = LAContext()
+        
+        var error: NSError?
+        
+        if context.canEvaluatePolicy( LAPolicy.deviceOwnerAuthenticationWithBiometrics,error: &error) {
+            
+            // Device can use TouchID
+            
+            context.evaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics,localizedReason: "Access requires authentication", reply: {
+                (success, error) in DispatchQueue.main.async {
+                    
+                    if error != nil {
+                        
+                        switch error!._code {
+                            
+                        case LAError.Code.systemCancel.rawValue:
+                            self.notifyUser("Session cancelled", err: error?.localizedDescription)
+                            
+                        case LAError.Code.userCancel.rawValue:
+                            self.notifyUser("Please try again", err: error?.localizedDescription)
+                            
+                        case LAError.Code.userFallback.rawValue:
+                            self.notifyUser("Authentication", err: "Password option selected")
+                            // Custom code to obtain password here
+                            
+                        default:
+                            self.notifyUser("Authentication failed", err: error?.localizedDescription)
+                        }
+                        
+                    } else {
+                        self.notifyUser("Authentication Successful", err: "You now have full access")
+                        self.performSegue(withIdentifier: "access", sender: self)
+                    }
+                }
+            })
+            
+        } else {
+            // Device cannot use TouchID
+            switch error!.code{
+                
+            case LAError.Code.touchIDNotEnrolled.rawValue:
+                notifyUser("TouchID is not enrolled",err: error?.localizedDescription)
+                
+            case LAError.Code.passcodeNotSet.rawValue:
+                notifyUser("A passcode has not been set", err: error?.localizedDescription)
+                
+            default:
+                notifyUser("TouchID not available", err: error?.localizedDescription)
+                
+            }
+        }
+    }
+    
+    private func notifyUser(_ msg: String, err: String?) {
+        let alert = UIAlertController(title: msg,message: err, preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        
+        alert.addAction(cancelAction)
+        
+        self.present(alert, animated: true,completion: nil)
     }
 }

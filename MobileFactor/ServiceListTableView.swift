@@ -8,10 +8,13 @@
 
 import UIKit
 
-class ServiceListTableView : UITableViewController {
+class ServiceListTableView : UITableViewController, UISearchBarDelegate {
     
     var myServices = ServiceCollection(x: "my")
     
+    var searchServices : [String]!
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +25,22 @@ class ServiceListTableView : UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         //self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
+        searchBar.delegate = self
         
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        // When there is no text, filteredData is the same as the original data
+        // When user has entered text into the search box
+        // Use the filter method to iterate over all items in the data array
+        // For each item, return true if the item should be included and false if the
+        // item should NOT be included
+        searchServices = searchText.isEmpty ? myServices :
         
+            return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
+        // imp arch info app auto
+        
+        tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
