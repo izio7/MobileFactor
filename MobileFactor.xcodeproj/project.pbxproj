@@ -27,6 +27,7 @@
 		18EE04331E6A9FE400DA916D /* ServerFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE04321E6A9FE400DA916D /* ServerFake.swift */; };
 		18EE04351E6AA34D00DA916D /* RegisterBViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE04341E6AA34D00DA916D /* RegisterBViewControl.swift */; };
 		18FA88E31E6DD92A0063C15F /* AddServiceTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA88E21E6DD92A0063C15F /* AddServiceTableView.swift */; };
+		94F561D31E6EB8F1004C9922 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F561D21E6EB8F1004C9922 /* QRCodeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		18EE04321E6A9FE400DA916D /* ServerFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerFake.swift; sourceTree = "<group>"; };
 		18EE04341E6AA34D00DA916D /* RegisterBViewControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterBViewControl.swift; sourceTree = "<group>"; };
 		18FA88E21E6DD92A0063C15F /* AddServiceTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServiceTableView.swift; sourceTree = "<group>"; };
+		94F561D21E6EB8F1004C9922 /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				184BA4A81E66DCC5002D2D7D /* AppDelegate.swift */,
+				94F561D21E6EB8F1004C9922 /* QRCodeViewController.swift */,
 				184BA4AA1E66DCC5002D2D7D /* ViewController.swift */,
 				184BA4AC1E66DCC5002D2D7D /* Main.storyboard */,
 				184BA4B21E66DCC5002D2D7D /* Assets.xcassets */,
@@ -241,7 +244,7 @@
 				TargetAttributes = {
 					184BA4A41E66DCC5002D2D7D = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = EHCRMD9M6N;
+						DevelopmentTeam = T49GDG2KKA;
 						ProvisioningStyle = Automatic;
 					};
 					184BA4BB1E66DCC5002D2D7D = {
@@ -317,6 +320,7 @@
 				184BA4AB1E66DCC5002D2D7D /* ViewController.swift in Sources */,
 				184BA4A91E66DCC5002D2D7D /* AppDelegate.swift in Sources */,
 				184BA4B11E66DCC5002D2D7D /* MobileFactor.xcdatamodeld in Sources */,
+				94F561D31E6EB8F1004C9922 /* QRCodeViewController.swift in Sources */,
 				18FA88E31E6DD92A0063C15F /* AddServiceTableView.swift in Sources */,
 				1844F4031E69B031002A6A96 /* User.swift in Sources */,
 				18B400341E6DF92A0015295A /* TableViewCell.swift in Sources */,
@@ -473,10 +477,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = EHCRMD9M6N;
+				DEVELOPMENT_TEAM = T49GDG2KKA;
 				INFOPLIST_FILE = MobileFactor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vda.MobileFactor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dario.myGroceryList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -486,10 +490,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = EHCRMD9M6N;
+				DEVELOPMENT_TEAM = T49GDG2KKA;
 				INFOPLIST_FILE = MobileFactor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vda.MobileFactor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dario.myGroceryList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
