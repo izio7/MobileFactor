@@ -11,11 +11,12 @@ import UIKit
 class ServiceListTableView : UITableViewController {
     
     var myServices = ServiceCollection(x: "my")
-    
+    let userReloaded = UserDefaults.standard
+    var objectArray : [Service]? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //objectArray = readAllMyServices()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -42,7 +43,7 @@ class ServiceListTableView : UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
-        return myServices.collection.count
+        return objectArray!.count
     }
     
     
@@ -53,15 +54,74 @@ class ServiceListTableView : UITableViewController {
         
         // Configure the cell...
         
-        var i = indexPath.row
+        let serv = objectArray?[indexPath.row]
         
-        var serv = myServices.collection[indexPath.row]
-        
-        cell.icon.image = serv.icon
-        cell.serviceName.text = serv.showedName
+        //var serv = myServices.collection[indexPath.row]
+
+        cell.icon.image = serv?.icon
+        //print("Icon: " + "\(serv?.icon)")
+        //print()
+        cell.serviceName.text = serv?.showedName
+        //print("ShowedName: " + "\(serv?.showedName)")
+        //print()
+        //print("Username: " + "\(serv?.username)")
+        //print()
+        //print("Password: " + "\(serv?.password)")
+        //print()
+        //print("Service: " + "\(serv)")
+        //print()
         
         return cell
     }
+    
+    
+    func readAllMyServices() -> [Service]{
+        var objectArray = [Service]()
+        var key_domain = ""
+        var mail_value = ""
+        var pass_value = ""
+        var icon_value : UIImage? = nil
+        var dict_return = ["":""]
+        for key in userReloaded.dictionaryRepresentation().keys{
+            if(key.hasPrefix("mf_")){
+                dict_return = userReloaded.object(forKey: key) as! Dictionary<String, String>
+                /*print("Dictionary: " + "\(dict_return)")
+                print("UserDefaults: " + "\(userReloaded.dictionaryRepresentation())")*/
+                key_domain = key
+                
+                //SWITCH PER SCELTA DELL'ICONA
+                switch key_domain {
+                    case "mf_facebook.com":
+                        icon_value = #imageLiteral(resourceName: "fbIcon")
+                    case "mf_twitter.com":
+                        icon_value = #imageLiteral(resourceName: "twitterIcon")
+                default:
+                    icon_value = #imageLiteral(resourceName: "fbIcon")
+                }
+                
+                for (key, value) in dict_return{
+                    if(key == "mail"){
+                        mail_value = value
+                    } else if(key == "Pass"){
+                        pass_value = value
+                    }
+                }
+                        }
+            let serv = Service(showedName: key_domain, domain: key_domain, icon: icon_value, user: mail_value, pass: pass_value)
+            objectArray.append(serv)
+    }
+        
+        return objectArray
+    }
+    
+        func readServiceInfo(domain : String){
+            let userReloaded = UserDefaults.standard.object(forKey: "mf_" + domain) as! Dictionary<String, String>
+            let mail_crypted = userReloaded["email"]
+            let pass_crypted = userReloaded["Pass"]
+            //Decriptaggio di mail e pass//
+            //.....
+        }
+
     
     /*
      // Override to support conditional editing of the table view.
@@ -136,7 +196,9 @@ class ServiceListTableView : UITableViewController {
             
              if let currentIndex = tableView.indexPathForSelectedRow?.row {
              
-             let s = myServices.collection[currentIndex]
+             let s = objectArray?[currentIndex]
+                print("Segue objectArray email:" + "\(s?.username)")
+             //let s = myServices.collection[currentIndex]
              
              let dstView = segue.destination as! ServiceDetailsVC
              
@@ -155,6 +217,7 @@ class ServiceListTableView : UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        objectArray = readAllMyServices()
         tableView.reloadData()
     }
     

@@ -13,7 +13,7 @@ class Service : NSObject {
     
     var showedName : String = ""
     var domain : String = ""
-    var icon : UIImage
+    var icon : UIImage?
     
     var username = ""
     var password = ""
@@ -31,7 +31,7 @@ class Service : NSObject {
         login = true
     }
     
-    init (showedName: String, domain: String, icon: UIImage, user : String, pass: String) {
+    init (showedName: String, domain: String, icon: UIImage?, user : String, pass: String) {
         self.showedName = showedName
         self.domain = domain
         self.icon = icon

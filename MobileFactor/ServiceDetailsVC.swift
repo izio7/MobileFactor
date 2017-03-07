@@ -41,6 +41,27 @@ class ServiceDetailsVC : UIViewController{
         
     }
     
+    //Saving new service
+    func saveService(email : String, pass : String, domain : String){
+        //Crittografia di email e password//
+        //.....
+        //Al posto di email e pass ci andranno quelle crittografate
+        let service = ["email": email, "Pass": pass]
+        UserDefaults.standard.setValue(service, forKey: "mf_" + domain)
+        print("Service after save: " + "\(UserDefaults.standard.object(forKey: "mf_" + domain))")
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        if (identifier == "saveService") {
+            print("Username from textView: " + username.text!)
+            self.saveService(email: username.text!, pass: password.text!, domain: domain.text!)
+            print("Saved!!")
+            return true
+        }
+        return false;
+    }
+    
     @IBOutlet weak var domain: UITextField!
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
