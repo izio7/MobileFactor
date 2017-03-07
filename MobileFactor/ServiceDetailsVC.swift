@@ -19,6 +19,8 @@ class ServiceDetailsVC : UIViewController{
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,11 +42,13 @@ class ServiceDetailsVC : UIViewController{
         super.viewWillDisappear(animated)
         
     }
-    
+  
     @IBOutlet weak var domain: UITextField!
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var autologin: UISwitch!
     
     @IBOutlet weak var exitButton: UIButton!
+    
+    
 }

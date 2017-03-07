@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183185861E6EC97900918AF3 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183185851E6EC97900918AF3 /* LocalAuthentication.framework */; };
 		1844F4031E69B031002A6A96 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844F4021E69B031002A6A96 /* User.swift */; };
 		184BA4A91E66DCC5002D2D7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BA4A81E66DCC5002D2D7D /* AppDelegate.swift */; };
 		184BA4AB1E66DCC5002D2D7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BA4AA1E66DCC5002D2D7D /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		183185851E6EC97900918AF3 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		1844F4021E69B031002A6A96 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		184BA4A51E66DCC5002D2D7D /* MobileFactor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileFactor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		184BA4A81E66DCC5002D2D7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183185861E6EC97900918AF3 /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		183185841E6EC97900918AF3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				183185851E6EC97900918AF3 /* LocalAuthentication.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		184BA49C1E66DCC5002D2D7D = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +116,7 @@
 				184BA4BF1E66DCC5002D2D7D /* MobileFactorTests */,
 				184BA4CA1E66DCC5002D2D7D /* MobileFactorUITests */,
 				184BA4A61E66DCC5002D2D7D /* Products */,
+				183185841E6EC97900918AF3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
