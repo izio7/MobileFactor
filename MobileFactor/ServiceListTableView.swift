@@ -28,7 +28,7 @@ class ServiceListTableView : UITableViewController, UISearchBarDelegate {
         searchBar.delegate = self
         
     }
-    
+    /*
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         // When there is no text, filteredData is the same as the original data
         // When user has entered text into the search box
@@ -42,7 +42,7 @@ class ServiceListTableView : UITableViewController, UISearchBarDelegate {
         
         tableView.reloadData()
     }
-    
+    */
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
