@@ -31,7 +31,7 @@ class ServiceDetailsVC : UIViewController{
         
         domain.text = currentService.domain
         username.text = currentService.username
-        password.text = currentService.username
+        password.text = currentService.password
         autologin.isOn = currentService.login
         
     }
