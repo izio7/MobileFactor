@@ -20,7 +20,9 @@ class LoginViewController : UIViewController {
     @IBOutlet weak var registerButton: UIButton!
     
     @IBAction func accessButtonPressed(_ sender: UIButton) {
+        
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +42,7 @@ class LoginViewController : UIViewController {
         //tap.cancelsTouchesInView = false
         
         view.addGestureRecognizer(tap)
+        NotificationHandler.handleView(currentView: self)
         
     }
     
@@ -50,7 +53,7 @@ class LoginViewController : UIViewController {
     }
     
     func viewWillAppear() {
-        
+        NotificationHandler.handleView(currentView: self)
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {

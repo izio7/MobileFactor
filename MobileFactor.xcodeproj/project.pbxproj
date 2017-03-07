@@ -27,6 +27,9 @@
 		18EE04331E6A9FE400DA916D /* ServerFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE04321E6A9FE400DA916D /* ServerFake.swift */; };
 		18EE04351E6AA34D00DA916D /* RegisterBViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE04341E6AA34D00DA916D /* RegisterBViewControl.swift */; };
 		18FA88E31E6DD92A0063C15F /* AddServiceTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA88E21E6DD92A0063C15F /* AddServiceTableView.swift */; };
+		499C1DF11E6F48F700D1057E /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C1DF01E6F48F700D1057E /* NotificationHandler.swift */; };
+		499C1DF31E6F51ED00D1057E /* RestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C1DF21E6F51ED00D1057E /* RestAPI.swift */; };
+		499C1DF51E6F55D800D1057E /* CredentialStorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C1DF41E6F55D800D1057E /* CredentialStorageProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,10 @@
 		18EE04321E6A9FE400DA916D /* ServerFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerFake.swift; sourceTree = "<group>"; };
 		18EE04341E6AA34D00DA916D /* RegisterBViewControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterBViewControl.swift; sourceTree = "<group>"; };
 		18FA88E21E6DD92A0063C15F /* AddServiceTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServiceTableView.swift; sourceTree = "<group>"; };
+		499C1DEF1E6F3E5700D1057E /* MobileFactor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MobileFactor.entitlements; sourceTree = "<group>"; };
+		499C1DF01E6F48F700D1057E /* NotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
+		499C1DF21E6F51ED00D1057E /* RestAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestAPI.swift; sourceTree = "<group>"; };
+		499C1DF41E6F55D800D1057E /* CredentialStorageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialStorageProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +140,8 @@
 		184BA4A71E66DCC5002D2D7D /* MobileFactor */ = {
 			isa = PBXGroup;
 			children = (
+				499C1DF21E6F51ED00D1057E /* RestAPI.swift */,
+				499C1DEF1E6F3E5700D1057E /* MobileFactor.entitlements */,
 				184BA4A81E66DCC5002D2D7D /* AppDelegate.swift */,
 				184BA4AA1E66DCC5002D2D7D /* ViewController.swift */,
 				184BA4AC1E66DCC5002D2D7D /* Main.storyboard */,
@@ -151,6 +160,8 @@
 				18B400371E6DFB2B0015295A /* ServiceCollection.swift */,
 				18B400391E6E03740015295A /* ServiceListTableView.swift */,
 				18B4003B1E6E08230015295A /* ServiceDetailsVC.swift */,
+				499C1DF01E6F48F700D1057E /* NotificationHandler.swift */,
+				499C1DF41E6F55D800D1057E /* CredentialStorageProvider.swift */,
 			);
 			path = MobileFactor;
 			sourceTree = "<group>";
@@ -241,8 +252,16 @@
 				TargetAttributes = {
 					184BA4A41E66DCC5002D2D7D = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = EHCRMD9M6N;
+						DevelopmentTeam = GKSEE88XH8;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					184BA4BB1E66DCC5002D2D7D = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -308,6 +327,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				499C1DF31E6F51ED00D1057E /* RestAPI.swift in Sources */,
+				499C1DF51E6F55D800D1057E /* CredentialStorageProvider.swift in Sources */,
 				18EE04311E69CC7100DA916D /* LoginViewController.swift in Sources */,
 				18B400381E6DFB2B0015295A /* ServiceCollection.swift in Sources */,
 				18B400361E6DFA510015295A /* Service.swift in Sources */,
@@ -315,6 +336,7 @@
 				18B4003A1E6E03740015295A /* ServiceListTableView.swift in Sources */,
 				18EE04331E6A9FE400DA916D /* ServerFake.swift in Sources */,
 				184BA4AB1E66DCC5002D2D7D /* ViewController.swift in Sources */,
+				499C1DF11E6F48F700D1057E /* NotificationHandler.swift in Sources */,
 				184BA4A91E66DCC5002D2D7D /* AppDelegate.swift in Sources */,
 				184BA4B11E66DCC5002D2D7D /* MobileFactor.xcdatamodeld in Sources */,
 				18FA88E31E6DD92A0063C15F /* AddServiceTableView.swift in Sources */,
@@ -473,10 +495,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = EHCRMD9M6N;
+				CODE_SIGN_ENTITLEMENTS = MobileFactor/MobileFactor.entitlements;
+				DEVELOPMENT_TEAM = GKSEE88XH8;
 				INFOPLIST_FILE = MobileFactor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vda.MobileFactor;
+				PRODUCT_BUNDLE_IDENTIFIER = it.etuitus.etmobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -486,10 +509,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = EHCRMD9M6N;
+				CODE_SIGN_ENTITLEMENTS = MobileFactor/MobileFactor.entitlements;
+				DEVELOPMENT_TEAM = GKSEE88XH8;
 				INFOPLIST_FILE = MobileFactor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vda.MobileFactor;
+				PRODUCT_BUNDLE_IDENTIFIER = it.etuitus.etmobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
