@@ -50,4 +50,20 @@ class RestAPI {
         task.resume()
     }
     
+    
+    static func revokeCredentials(challenge: String, token: String){
+        let todoEndpoint: String = "http://mobilefactor.shev.pro/deliver_credential.php?challenge=\(challenge)&token=\(token)&deny=true"
+        guard let url = URL(string: todoEndpoint) else {
+            print("Error: cannot create URL")
+            return
+        }
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "POST"
+        
+        let session = URLSession.shared
+        let task = session.dataTask(with: urlRequest, completionHandler:{ _, _, _ in })
+        task.resume()
+        
+    }
+    
 }

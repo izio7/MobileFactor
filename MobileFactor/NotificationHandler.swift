@@ -39,7 +39,8 @@ class NotificationHandler: NSObject {
     static func showNotification(domain: String){
         let alert = UIAlertController(title: "Login request", message: "Attempting to login on \(domain).", preferredStyle: UIAlertControllerStyle.alert)
         
-        alert.addAction(UIAlertAction(title: "Deny access", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Deny access", style: UIAlertActionStyle.default, handler: {(alert: UIAlertAction!) in RestAPI.revokeCredentials(challenge: challenge!, token: token!)}))
+        
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {(alert: UIAlertAction!) in RestAPI.deliverCredentials(challenge: challenge!, token: token!, formData: CredentialStorageProvider.provideCredentials(forDomain: domain)!, completition:{ _, _, _ in })}))
         
         lastViewController?.present(alert, animated: true, completion: nil)
