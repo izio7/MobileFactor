@@ -17,8 +17,6 @@ class RegisterBViewControl : UIViewController {
         
         codeTextField.text = ""
         codeTextField.placeholder = "- - - / - - -"
-        
-        
     }
     
     func viewWillAppear() {

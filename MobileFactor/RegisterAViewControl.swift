@@ -19,11 +19,19 @@ class RegisterAViewControl: UIViewController {
         
         print(identifier)
         
+        let userDefaults = UserDefaults.standard
         let name = userNameTextField.text
         let email = emailTextField.text
         
         if (name != ""  && self.validateEmail(enteredEmail: email!)) {
-            print("ok")
+            
+            //Bisognerebbe applicare la crittografia di username e mail... forse
+            let auth = ["username" : name, "email" : email]
+            userDefaults.set(auth, forKey: "mf_authentication")
+            //Invia auth al server
+            
+            //If want remove the authentication delete comment tag
+            //userDefaults.remove("mf_authentication")
             return true
         }
         

@@ -38,7 +38,6 @@ class ServiceDetailsVC : UIViewController{
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
     }
     
     //Save new service

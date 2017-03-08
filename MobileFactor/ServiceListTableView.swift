@@ -42,7 +42,6 @@ class ServiceListTableView : UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        print("Count objectArray: " + "\(objectArray!.count)")
         return objectArray!.count
     }
     
@@ -53,24 +52,9 @@ class ServiceListTableView : UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "idCell", for: indexPath) as! TableViewCell
         
         // Configure the cell...
-        
         let serv = objectArray?[indexPath.row]
-        
-        //var serv = myServices.collection[indexPath.row]
-
         cell.icon.image = serv?.icon
-        //print("Icon: " + "\(serv?.icon)")
-        //print()
         cell.serviceName.text = serv?.showedName
-        //print("ShowedName: " + "\(serv?.showedName)")
-        //print()
-        //print("Username: " + "\(serv?.username)")
-        //print()
-        //print("Password: " + "\(serv?.password)")
-        //print()
-        //print("Service: " + "\(serv)")
-        //print()
-        
         return cell
     }
     
@@ -94,8 +78,6 @@ class ServiceListTableView : UITableViewController {
         
         var i = 0
         for key in userReloaded.dictionaryRepresentation().keys{
-            i = i + 1
-            print("i: " + "\(i)")
             if(key.hasPrefix("mf_")){
                 dict_return = userReloaded.object(forKey: key) as! Dictionary<String, String>
                 key_domain = key
@@ -202,11 +184,7 @@ class ServiceListTableView : UITableViewController {
         case "showItem"? :
             
              if let currentIndex = tableView.indexPathForSelectedRow?.row {
-             
              let s = objectArray?[currentIndex]
-                print("Segue objectArray email:" + "\(s?.username)")
-             //let s = myServices.collection[currentIndex]
-             
              let dstView = segue.destination as! ServiceDetailsVC
              dstView.currentService = s
              }
