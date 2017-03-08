@@ -28,13 +28,14 @@ class LoginViewController : UIViewController {
         super.viewDidLoad()
         
         emailTextField.text=""
-        emailTextField.placeholder="inserisci la tua mail"
+        emailTextField.placeholder = "inserisci la tua mail"
         
         
         user = createFakeUser()
         
         emailTextField.keyboardType = UIKeyboardType.default
         
+<<<<<<< HEAD
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         
@@ -50,6 +51,10 @@ class LoginViewController : UIViewController {
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
+=======
+        test()
+        
+>>>>>>> Dave/v0.1.2
     }
     
     func viewWillAppear() {
@@ -91,11 +96,19 @@ class LoginViewController : UIViewController {
         
         var error: NSError?
         
+<<<<<<< HEAD
         if context.canEvaluatePolicy( LAPolicy.deviceOwnerAuthenticationWithBiometrics,error: &error) {
             
             // Device can use TouchID
             
             context.evaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics,localizedReason: "Access requires authentication", reply: {
+=======
+        if context.canEvaluatePolicy( LAPolicy.deviceOwnerAuthentication,error: &error) {
+            
+            // Device can use TouchID
+            
+            context.evaluatePolicy(LAPolicy.deviceOwnerAuthentication,localizedReason: "Access requires authentication", reply: {
+>>>>>>> Dave/v0.1.2
                 (success, error) in DispatchQueue.main.async {
                     
                     if error != nil {
@@ -117,8 +130,15 @@ class LoginViewController : UIViewController {
                         }
                         
                     } else {
+<<<<<<< HEAD
                         self.notifyUser("Authentication Successful", err: "You now have full access")
                         self.performSegue(withIdentifier: "access", sender: self)
+=======
+                        
+                        self.performSegue(withIdentifier: "access", sender: self)
+                        //self.notifyUser("Authentication Successful", err: "You now have full access")
+                        
+>>>>>>> Dave/v0.1.2
                     }
                 }
             })

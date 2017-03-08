@@ -13,7 +13,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="MobileFactor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="MobileFactor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -105,7 +105,7 @@
         <!--RegisterA View Control-->
         <scene sceneID="zMt-UQ-TrS">
             <objects>
-                <viewController id="opi-Mf-nkK" customClass="RegisterAViewControl" customModule="MobileFactor" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterAViewControl" id="opi-Mf-nkK" customClass="RegisterAViewControl" customModule="MobileFactor" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Cc-0V-odt"/>
                         <viewControllerLayoutGuide type="bottom" id="aVH-bf-UnG"/>
@@ -300,53 +300,6 @@
             </objects>
             <point key="canvasLocation" x="-167" y="-679"/>
         </scene>
-        <!--Code View Controller-->
-        <scene sceneID="FYx-cc-xUo">
-            <objects>
-                <viewController id="Hcq-6t-1bJ" customClass="QRCodeViewController" customModule="MobileFactor" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="h4o-na-b39"/>
-                        <viewControllerLayoutGuide type="bottom" id="9tq-IB-8Gq"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6Yo-zh-eBa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="euQ-sD-5Ie">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No QR code is detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjP-CH-4PS" userLabel="statusLabel">
-                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="dv7-uX-vlK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="9tq-IB-8Gq" firstAttribute="top" secondItem="xjP-CH-4PS" secondAttribute="bottom" id="31V-ti-Hwc"/>
-                            <constraint firstItem="euQ-sD-5Ie" firstAttribute="centerY" secondItem="6Yo-zh-eBa" secondAttribute="centerY" id="7lh-Xl-byt"/>
-                            <constraint firstItem="xjP-CH-4PS" firstAttribute="leading" secondItem="6Yo-zh-eBa" secondAttribute="leading" id="9fF-RQ-0gJ"/>
-                            <constraint firstItem="euQ-sD-5Ie" firstAttribute="height" secondItem="6Yo-zh-eBa" secondAttribute="height" id="Lyb-bS-VHe"/>
-                            <constraint firstItem="xjP-CH-4PS" firstAttribute="width" secondItem="6Yo-zh-eBa" secondAttribute="width" id="Ti9-lD-a0B"/>
-                            <constraint firstItem="euQ-sD-5Ie" firstAttribute="width" secondItem="6Yo-zh-eBa" secondAttribute="width" id="aec-NU-4KP"/>
-                            <constraint firstItem="euQ-sD-5Ie" firstAttribute="centerX" secondItem="6Yo-zh-eBa" secondAttribute="centerX" id="dwz-Xq-Hbk"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="qrView" destination="euQ-sD-5Ie" id="Xok-eF-9OU"/>
-                        <outlet property="statusLabel" destination="xjP-CH-4PS" id="VWQ-fe-hr1"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iDK-pA-lIL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="756" y="-680"/>
-        </scene>
         <!--Services: -->
         <scene sceneID="S0X-hc-e1b">
             <objects>
@@ -409,7 +362,7 @@
                                 <state key="normal" title="Back"/>
                             </button>
                             <connections>
-                                <segue destination="zNz-mA-tNI" kind="show" id="tOt-GZ-I3X"/>
+                                <segue destination="zNz-mA-tNI" kind="show" id="iDS-co-tvc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -552,7 +505,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E8j-Pf-4qc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1649" y="-1507"/>
+            <point key="canvasLocation" x="1649" y="-1506"/>
         </scene>
         <!--Services: -->
         <scene sceneID="0A7-QP-zFO">
@@ -608,20 +561,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Services: " id="Icv-kW-Jg4">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="camera" id="8XZ-VR-U13">
-                            <connections>
-                                <segue destination="Hcq-6t-1bJ" kind="show" identifier="QR" id="C42-bt-gxX"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="camera" id="8XZ-VR-U13"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="w3T-KK-JAa">
                             <connections>
                                 <segue destination="Xw8-jr-ohL" kind="show" id="DJX-qj-Ui1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="searchBar" destination="C04-O5-EOt" id="flq-Ty-Hwe"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QNG-Oz-9ef" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <searchDisplayController id="No7-aU-vV5">
@@ -657,8 +603,8 @@
         <image name="bg" width="1080" height="1920"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tOt-GZ-I3X"/>
-        <segue reference="TgJ-hs-TTs"/>
-        <segue reference="eby-XJ-Hw5"/>
+        <segue reference="iDS-co-tvc"/>
+        <segue reference="vpM-4n-Ik6"/>
+        <segue reference="PGj-mP-50E"/>
     </inferredMetricsTieBreakers>
 </document>
