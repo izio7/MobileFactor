@@ -241,7 +241,7 @@
 				TargetAttributes = {
 					184BA4A41E66DCC5002D2D7D = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = EHCRMD9M6N;
+						DevelopmentTeam = P4A9TWSR7H;
 						ProvisioningStyle = Automatic;
 					};
 					184BA4BB1E66DCC5002D2D7D = {
@@ -473,10 +473,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = EHCRMD9M6N;
+				DEVELOPMENT_TEAM = P4A9TWSR7H;
 				INFOPLIST_FILE = MobileFactor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vda.MobileFactor;
+				PRODUCT_BUNDLE_IDENTIFIER = vda.MobileFactor1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -486,10 +486,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = EHCRMD9M6N;
+				DEVELOPMENT_TEAM = P4A9TWSR7H;
 				INFOPLIST_FILE = MobileFactor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vda.MobileFactor;
+				PRODUCT_BUNDLE_IDENTIFIER = vda.MobileFactor1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
