@@ -42,7 +42,7 @@ class ServiceListTableView : UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        
+        print("Count objectArray: " + "\(objectArray!.count)")
         return objectArray!.count
     }
     
@@ -82,11 +82,22 @@ class ServiceListTableView : UITableViewController {
         var pass_value = ""
         var icon_value : UIImage? = nil
         var dict_return = ["":""]
+
+        //For remove all elements with mf_ prefix in the UserDefaults
+        /*for key in userReloaded.dictionaryRepresentation().keys{
+            if(key.hasPrefix("mf_")){
+                print("First: " + "\(userReloaded.dictionaryRepresentation())")
+                userReloaded.removeObject(forKey: key)
+                print("After: " + "\(userReloaded.dictionaryRepresentation())")
+            }
+        }*/
+        
+        var i = 0
         for key in userReloaded.dictionaryRepresentation().keys{
+            i = i + 1
+            print("i: " + "\(i)")
             if(key.hasPrefix("mf_")){
                 dict_return = userReloaded.object(forKey: key) as! Dictionary<String, String>
-                /*print("Dictionary: " + "\(dict_return)")
-                print("UserDefaults: " + "\(userReloaded.dictionaryRepresentation())")*/
                 key_domain = key
                 
                 //SWITCH PER SCELTA DELL'ICONA
@@ -99,29 +110,25 @@ class ServiceListTableView : UITableViewController {
                     icon_value = #imageLiteral(resourceName: "fbIcon")
                 }
                 
-                for (key, value) in dict_return{
-                    if(key == "mail"){
-                        mail_value = value
-                    } else if(key == "Pass"){
-                        pass_value = value
-                    }
-                }
-                        }
-            let serv = Service(showedName: key_domain, domain: key_domain, icon: icon_value, user: mail_value, pass: pass_value)
-            objectArray.append(serv)
-    }
-        
+                //Substring per eliminare il prefisso mf_
+                let startIndex = key_domain.index(key_domain.startIndex, offsetBy: 3)
+                key_domain = key_domain.substring(from: startIndex)
+                mail_value = dict_return["email"]!
+                pass_value = dict_return["Pass"]!
+                let serv = Service(showedName: key_domain, domain: key_domain, icon: icon_value, user: mail_value, pass: pass_value)
+                objectArray.append(serv)
+            }
+        }
         return objectArray
     }
     
-        func readServiceInfo(domain : String){
+        /*func readServiceInfo(domain : String){
             let userReloaded = UserDefaults.standard.object(forKey: "mf_" + domain) as! Dictionary<String, String>
             let mail_crypted = userReloaded["email"]
             let pass_crypted = userReloaded["Pass"]
             //Decriptaggio di mail e pass//
             //.....
-        }
-
+        }*/
     
     /*
      // Override to support conditional editing of the table view.
@@ -201,7 +208,6 @@ class ServiceListTableView : UITableViewController {
              //let s = myServices.collection[currentIndex]
              
              let dstView = segue.destination as! ServiceDetailsVC
-             
              dstView.currentService = s
              }
             break
@@ -218,6 +224,7 @@ class ServiceListTableView : UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         objectArray = readAllMyServices()
+        print("Count objectArray: " + "\(objectArray!.count)")
         tableView.reloadData()
     }
     

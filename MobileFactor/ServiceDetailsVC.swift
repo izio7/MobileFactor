@@ -41,7 +41,7 @@ class ServiceDetailsVC : UIViewController{
         
     }
     
-    //Saving new service
+    //Save new service
     func saveService(email : String, pass : String, domain : String){
         //Crittografia di email e password//
         //.....
