@@ -300,10 +300,10 @@
             </objects>
             <point key="canvasLocation" x="-167" y="-679"/>
         </scene>
-        <!--View Controller-->
+        <!--Code View Controller-->
         <scene sceneID="FYx-cc-xUo">
             <objects>
-                <viewController id="Hcq-6t-1bJ" sceneMemberID="viewController">
+                <viewController id="Hcq-6t-1bJ" customClass="QRCodeViewController" customModule="MobileFactor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h4o-na-b39"/>
                         <viewControllerLayoutGuide type="bottom" id="9tq-IB-8Gq"/>
@@ -311,8 +311,37 @@
                     <view key="view" contentMode="scaleToFill" id="6Yo-zh-eBa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No QR code is detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjP-CH-4PS" userLabel="statusLabel">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="dv7-uX-vlK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="euQ-sD-5Ie">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9tq-IB-8Gq" firstAttribute="top" secondItem="xjP-CH-4PS" secondAttribute="bottom" id="31V-ti-Hwc"/>
+                            <constraint firstItem="euQ-sD-5Ie" firstAttribute="centerY" secondItem="6Yo-zh-eBa" secondAttribute="centerY" id="7lh-Xl-byt"/>
+                            <constraint firstItem="xjP-CH-4PS" firstAttribute="leading" secondItem="6Yo-zh-eBa" secondAttribute="leading" id="9fF-RQ-0gJ"/>
+                            <constraint firstItem="euQ-sD-5Ie" firstAttribute="height" secondItem="6Yo-zh-eBa" secondAttribute="height" id="Lyb-bS-VHe"/>
+                            <constraint firstItem="xjP-CH-4PS" firstAttribute="width" secondItem="6Yo-zh-eBa" secondAttribute="width" id="Ti9-lD-a0B"/>
+                            <constraint firstItem="euQ-sD-5Ie" firstAttribute="width" secondItem="6Yo-zh-eBa" secondAttribute="width" id="aec-NU-4KP"/>
+                            <constraint firstItem="euQ-sD-5Ie" firstAttribute="centerX" secondItem="6Yo-zh-eBa" secondAttribute="centerX" id="dwz-Xq-Hbk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="qrView" destination="euQ-sD-5Ie" id="Xok-eF-9OU"/>
+                        <outlet property="statusLabel" destination="xjP-CH-4PS" id="VWQ-fe-hr1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iDK-pA-lIL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -628,8 +657,8 @@
         <image name="bg" width="1080" height="1920"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vpM-4n-Ik6"/>
-        <segue reference="PGj-mP-50E"/>
         <segue reference="tOt-GZ-I3X"/>
+        <segue reference="TgJ-hs-TTs"/>
+        <segue reference="eby-XJ-Hw5"/>
     </inferredMetricsTieBreakers>
 </document>
