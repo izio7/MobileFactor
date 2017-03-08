@@ -53,6 +53,8 @@ class AddServiceTableView : UITableViewController {
         
         let serv = services.collection[indexPath.row]
 
+        cell.icon.frame = CGRect(x: 0, y: 0, width: 32, height: 32)
+        
         
         cell.icon.image = serv.icon
         cell.serviceName.text = serv.showedName
@@ -140,6 +142,7 @@ class AddServiceTableView : UITableViewController {
                 dstView.currentService = s
                 
             }
+            
         break
         
             
